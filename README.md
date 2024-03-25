@@ -12,7 +12,7 @@ A `Map<K,V>` which in addition have:
 
 Singleton with a factory is given to the constructor
 
-```typestript
+```typescript
 const mySingleton = new TypedSingleton( theFactory );
 const theInstance = mySingleton.getSingleton()
 ```
