@@ -1,0 +1,19 @@
+# package directories
+node_modules
+
+# build
+build
+
+#coverage directories
+coverage
+
+scripts/*.properties
+
+# mac OS
+.DS_Store
+
+# Intellij
+.idea/
+
+# sonar-scanner-cli
+.scannerwork
