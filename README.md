@@ -11,6 +11,6 @@ A `Map<K,V>` with a `safeGet` method that throws whenever the element does not e
 Singleton with a factory is given to the constructor
 
 ```typestript
-const soleInstance = new TypedSingleton( factory );
-soleInstance.getSingleton()
+const mySingleton = new TypedSingleton( factory );
+const theInstance = mySingleton.getSingleton()
 ```
