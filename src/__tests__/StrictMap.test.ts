@@ -3,7 +3,7 @@ import {describe, it, expect } from '@jest/globals'
 
 describe('StrictMap', ()=>{
 
-    it('should return value if exists', ()=>{
+    it('should be strict when getting value', ()=>{
         const underTest = new StrictMap<number, string>([[1,'one'],[2,'two']]);
         expect(underTest.has(1)).toBe(true);
         expect(underTest.strictGet(1)).toBe('one');
@@ -11,5 +11,16 @@ describe('StrictMap', ()=>{
 
         expect(() => underTest.strictGet(666)).toThrowError();
 
-    })
+    });
+
+
+    it('should be strict when setting value', ()=>{
+        const underTest = new StrictMap<number, string>([[1,'one'],[2,'two']]);
+        expect(underTest.strictSet(3,'three')).toBe(underTest);
+        expect(underTest.strictGet(3)).toBe('three');
+
+
+        expect(() => underTest.strictSet(2, "value does exist already throw")).toThrowError();
+
+    });
 })
