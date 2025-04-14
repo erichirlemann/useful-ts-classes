@@ -12,7 +12,7 @@ export default class StrictMap<K,V> extends Map<K,V> {
         if( ! this.has(key)) {
             return this.set(key, value);
         } else {
-            throw new Error("Can't find element");
+            throw new Error(`Can't find element ${key}`) ;
         }
     }
 }
