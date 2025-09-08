@@ -34,6 +34,3 @@ timedOutDecorator(longTakingPromise, 1000)
     ...
   })
 ```
-
-
-## Experiment
